@@ -3,8 +3,25 @@
 
 if [[ -n "$1" ]]; then
   read A<$1
-  RESULT=$((A))
-  echo $RESULT
+  if [[ -z "$A" ]]; then
+    A=0
+  fi
 else
-  echo "The parameter isn't found. Script require one parametr as file1.txt"
+  echo "First parametr isn't entered. Script require the input format as ./calc.sh  file1 file2"
 fi
+
+if [[ -n "$2" ]]; then
+  read B<$2
+  if [[ -z "$B" ]]; then
+    B=0
+  fi
+else
+  echo "Second parametr isn't entered. Script require the input format as ./calc.sh file1 file2"
+fi
+
+if [[ $A -ge $B ]]; then
+  RESULT=$((A))
+else
+  RESULT=$((B))
+fi
+echo $RESULT
