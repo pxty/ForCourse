@@ -18,7 +18,7 @@ if [[ -n "$1" ]]; then
     A=0
   fi
 else
-  echo "First parametr isn't entered. Script require the input format as ./calc.sh  file1 file2"
+  echo "First parametr isn't put in. Script requires the input format as ./calc.sh  file1 file2"
 fi
 
 if [[ -n "$2" ]]; then
@@ -27,7 +27,7 @@ if [[ -n "$2" ]]; then
     B=0
   fi
 else
-  echo "Second parametr isn't entered. Script require the input format as ./calc.sh file1 file2"
+  echo "Second parametr isn't put in. Script requires the input format as ./calc.sh file1 file2"
 fi
 
 if [[ $A -ge $B ]]; then
